@@ -33,6 +33,8 @@ namespace mySQL_Practice_2
 
             dataGridView1.DataSource = albumBindingSource;
 
+            pictureBox1.Load("https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg");
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -53,6 +55,15 @@ namespace mySQL_Practice_2
             albumBindingSource.DataSource = albumDAO.searchTitles(textBox1.Text);
 
             dataGridView1.DataSource = albumBindingSource;
+
+            pictureBox1.Load("https://upload.wikimedia.org/wikipedia/en/4/42/Beatles_-_Abbey_Road.jpg");
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridView dataGridView = (DataGridView)sender;
+
+            // get the row number clicked
         }
     }
 }
